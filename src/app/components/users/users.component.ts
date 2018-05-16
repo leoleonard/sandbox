@@ -13,6 +13,8 @@ export class UsersComponent implements OnInit {
   loaded: boolean = false;
   enableAll: boolean = true;
   currentClasses = {};
+  currentStyles = {};
+
 
   constructor() { }
 
@@ -29,7 +31,9 @@ export class UsersComponent implements OnInit {
             state: 'MA'
           },
           image: 'https://picsum.photos/200/200/?random',
-          isActive: true
+          isActive: true,
+          balance: 100,
+          registered: new Date('01/02/2018 08:00')
         },
         {
           firstName: 'Kevin',
@@ -41,7 +45,9 @@ export class UsersComponent implements OnInit {
             state: 'MA'
           },
           image: 'https://picsum.photos/200/200/?random',
-          isActive: false
+          isActive: false,
+          balance: 200,
+          registered: new Date('02/03/2017 06:00')
         },
         {
           firstName: 'Karen',
@@ -53,6 +59,9 @@ export class UsersComponent implements OnInit {
             state: 'FL'
           },
           image: 'https://picsum.photos/200/200',
+          isActive: true,
+          balance: 50,
+          registered: new Date('11/02/2018 08:11')
         }
       ];
 
@@ -70,6 +79,7 @@ export class UsersComponent implements OnInit {
       // });
   
       this.setCurrentClasess();
+      this.setCurrentStyles();
 }
 
   addUser(user: User) {
@@ -81,6 +91,13 @@ export class UsersComponent implements OnInit {
       'btn-success': this.enableAll,
       'big-text': this.showExtended
     }
+  }
+
+  setCurrentStyles() {
+    this.currentStyles = {
+      'padding-top': this.showExtended ? '0' : '40px',
+      'font-size': this.showExtended ? '' : '40px',
+    } 
   }
   
 }
