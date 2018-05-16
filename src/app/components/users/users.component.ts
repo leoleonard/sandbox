@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../models/User';
+import { User } from '../models/User'; 
 
 @Component({
   selector: 'app-users',
@@ -11,10 +11,7 @@ export class UsersComponent implements OnInit {
   users: User[];
   showExtended: boolean = true;
   loaded: boolean = false;
-  enableAll: boolean = true;
-  currentClasses = {};
-  currentStyles = {};
-
+  enableAdd: boolean = true;
 
   constructor() { }
 
@@ -24,14 +21,15 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'John',
           lastName: 'Doe',
-          age: 30,
+          age: 70,
           address: {
             street: '50 Main st',
             city: 'Boston',
             state: 'MA'
           },
           isActive: true,
-          registered: new Date('01/02/2018 08:00')
+          registered: new Date('01/02/2018 08:30:00'),
+          hide: true
         },
         {
           firstName: 'Kevin',
@@ -43,7 +41,8 @@ export class UsersComponent implements OnInit {
             state: 'MA'
           },
           isActive: false,
-          registered: new Date('02/03/2017 06:00')
+          registered: new Date('03/11/2017 06:20:00'),
+          hide: true
         },
         {
           firstName: 'Karen',
@@ -55,43 +54,20 @@ export class UsersComponent implements OnInit {
             state: 'FL'
           },
           isActive: true,
-          registered: new Date('11/02/2018 08:11')
+          registered: new Date('11/02/2016 10:30:00'),
+          hide: true
         }
       ];
 
       this.loaded = true;
-
-      // this.addUser({
-      //   firstName: 'David',
-      //   lastName: 'Jackson',
-      //   age: 40,
-      //   address: {
-      //     street: 'One St',
-      //     city: 'Loop',
-      //     state: 'MA'
-      //   }
-      // });
-  
-      // this.setCurrentClasess();
-      // this.setCurrentStyles();
-}
+  }
 
   addUser(user: User) {
     this.users.push(user);
   }
 
-  // setCurrentClasess() {
-  //   this.currentClasses = {
-  //     'btn-success': this.enableAll,
-  //     'big-text': this.showExtended
-  //   }
-  // }
-
-  // setCurrentStyles() {
-  //   this.currentStyles = {
-  //     'padding-top': this.showExtended ? '0' : '40px',
-  //     'font-size': this.showExtended ? '' : '40px',
-  //   } 
+  // toggleHide(user: User) {
+  //   user.hide = !user.hide;
   // }
   
 }
