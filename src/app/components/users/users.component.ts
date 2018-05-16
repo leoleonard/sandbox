@@ -30,9 +30,7 @@ export class UsersComponent implements OnInit {
             city: 'Boston',
             state: 'MA'
           },
-          image: 'https://picsum.photos/200/200/?random',
           isActive: true,
-          balance: 100,
           registered: new Date('01/02/2018 08:00')
         },
         {
@@ -44,9 +42,7 @@ export class UsersComponent implements OnInit {
             city: 'Lynn',
             state: 'MA'
           },
-          image: 'https://picsum.photos/200/200/?random',
           isActive: false,
-          balance: 200,
           registered: new Date('02/03/2017 06:00')
         },
         {
@@ -58,9 +54,7 @@ export class UsersComponent implements OnInit {
             city: 'Miami',
             state: 'FL'
           },
-          image: 'https://picsum.photos/200/200',
           isActive: true,
-          balance: 50,
           registered: new Date('11/02/2018 08:11')
         }
       ];
@@ -78,26 +72,26 @@ export class UsersComponent implements OnInit {
       //   }
       // });
   
-      this.setCurrentClasess();
-      this.setCurrentStyles();
+      // this.setCurrentClasess();
+      // this.setCurrentStyles();
 }
 
   addUser(user: User) {
     this.users.push(user);
   }
 
-  setCurrentClasess() {
-    this.currentClasses = {
-      'btn-success': this.enableAll,
-      'big-text': this.showExtended
-    }
-  }
+  // setCurrentClasess() {
+  //   this.currentClasses = {
+  //     'btn-success': this.enableAll,
+  //     'big-text': this.showExtended
+  //   }
+  // }
 
-  setCurrentStyles() {
-    this.currentStyles = {
-      'padding-top': this.showExtended ? '0' : '40px',
-      'font-size': this.showExtended ? '' : '40px',
-    } 
-  }
+  // setCurrentStyles() {
+  //   this.currentStyles = {
+  //     'padding-top': this.showExtended ? '0' : '40px',
+  //     'font-size': this.showExtended ? '' : '40px',
+  //   } 
+  // }
   
 }
