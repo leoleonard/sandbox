@@ -11,12 +11,13 @@ export class UsersComponent implements OnInit {
   user: User = {
     firstName: '',
     lastName: '',
-    age: null,
-    address: {
-      street: '',
-      city: '',
-      state: ''
-    }
+    email: ''
+    // age: null,
+    // address: {
+    //   street: '',
+    //   city: '',
+    //   state: ''
+    // }
   }
   users: User[];
   showExtended: boolean = true;
@@ -32,12 +33,13 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'John',
           lastName: 'Doe',
-          age: 70,
-          address: {
-            street: '50 Main st',
-            city: 'Boston',
-            state: 'MA'
-          },
+          email: 'john@op.pl',
+          // age: 70,
+          // address: {
+          //   street: '50 Main st',
+          //   city: 'Boston',
+          //   state: 'MA'
+          // },
           isActive: true,
           registered: new Date('01/02/2018 08:30:00'),
           hide: true
@@ -45,12 +47,13 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'Kevin',
           lastName: 'Johnson',
-          age: 34,
-          address: {
-            street: '20 School st',
-            city: 'Lynn',
-            state: 'MA'
-          },
+          email: 'kevin@gmail.com',
+          // age: 34,
+          // address: {
+          //   street: '20 School st',
+          //   city: 'Lynn',
+          //   state: 'MA'
+          // },
           isActive: false,
           registered: new Date('03/11/2017 06:20:00'),
           hide: true
@@ -58,12 +61,13 @@ export class UsersComponent implements OnInit {
         {
           firstName: 'Karen',
           lastName: 'Williams',
-          age: 26,
-          address: {
-            street: '55 Mill st',
-            city: 'Miami',
-            state: 'FL'
-          },
+          email: 'karen@gmail.com',
+          // age: 26,
+          // address: {
+          //   street: '55 Mill st',
+          //   city: 'Miami',
+          //   state: 'FL'
+          // },
           isActive: true,
           registered: new Date('11/02/2016 10:30:00'),
           hide: true
@@ -82,12 +86,13 @@ export class UsersComponent implements OnInit {
     this.user = {
       firstName: '',
        lastName: '',
-       age: null,
-       address: {
-        street: '',
-        city: '',
-        state: ''
-      }
+       email: ''
+      //  age: null,
+      //  address: {
+      //   street: '',
+      //   city: '',
+      //   state: ''
+      // }
   }
 }
   
@@ -95,10 +100,10 @@ export class UsersComponent implements OnInit {
     e.preventDefault();
   }
 
-  fireEvent(e) {
-    console.log(e.type);
-    console.log(e.target.value);
-  }
+  // fireEvent(e) {
+  //   console.log(e.type);
+  //   console.log(e.target.value);
+  // }
 
 
 
